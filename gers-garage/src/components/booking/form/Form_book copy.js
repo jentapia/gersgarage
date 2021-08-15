@@ -27,7 +27,6 @@ function Form_book(props) {
 
  
   
-
   function booking1 (){
       
     if (!lic_plate) {
@@ -157,17 +156,20 @@ function Form_book(props) {
                 </Form.Control>
             </Form.Group>
 
-            {/* <Form.Group controlId="vehicle_make">
-                <Form.Label>Brand</Form.Label>
-                <Form.Control as="select" value={veh_make} onChange={(e) => setVeh_make(e.target.value)}>
-                    <option>{brandsData[1].brand}</option>
-                </Form.Control>
-            </Form.Group> */}
-
             <Form.Group controlId="vehicle_make">
                 <Form.Label>Brand</Form.Label>
-                <Form.Control type="text" placeholder="Enter brand" value={veh_make} onChange={(e) => setVeh_make(e.target.value)}/>
+                <Form.Control as="select" value={veh_make} onChange={(e) => setVeh_make(e.target.value)}>
+                    <option value="" disabled></option>
+                    {brandsData.map((option) =>(
+                        <option value={option.name}>{option.name}</option>
+                    ))}
+                </Form.Control>
             </Form.Group>
+
+            {/* <Form.Group controlId="vehicle_make">
+                <Form.Label>Brand</Form.Label>
+                <Form.Control type="text" placeholder="Enter brand" value={veh_make} onChange={(e) => setVeh_make(e.target.value)}/>
+            </Form.Group> */}
 
             <Form.Group controlId="vehicle_model">
                 <Form.Label>Model</Form.Label>
