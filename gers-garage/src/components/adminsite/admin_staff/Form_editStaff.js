@@ -41,7 +41,22 @@ function Form_editStaff (props) {
   }, []);
    
   function editstaff (){
-      
+    if (!firstname) {
+        alert('Please fill again Firstname');
+        return;
+    }
+    if (!surname) {
+        alert('Please fill again Surname');
+        return;
+    }
+    if (!phone) {
+        alert('Please fill again Mobile Phone');
+        return;
+    }
+    if (!address) {
+        alert('Please fill again Address');
+        return;
+    }  
     
     fetch('http://localhost:8080/editmember/'+id, {
         method: 'PUT',

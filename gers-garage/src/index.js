@@ -22,6 +22,8 @@ import Admin_listService from './components/adminsite/Admin_listService';
 import Admin_listStaff from './components/adminsite/Admin_listStaff';
 import Admin_newServ from './components/adminsite/Adm_newServ';
 import Adm_editStaff from './components/adminsite/Adm_editStaff';
+import Adm_editServ from './components/adminsite/Adm_editServ';
+import Adm_newStaff from './components/adminsite/Adm_newStaff';
 
 
 
@@ -47,6 +49,8 @@ ReactDOM.render(
         <Route path='/listservices' component={Admin_listService} />
         <Route path='/liststaff' component={Admin_listStaff} />
         <Route path='/newservice' component={Admin_newServ} />
+        <Route path='/newstaff' component={Adm_newStaff} />
+        <Route path='/editstaff/:id' component={Adm_editStaff} />
         <Route path='/editstaff/:id' component={Adm_editStaff} />
       </Switch>
   </div>

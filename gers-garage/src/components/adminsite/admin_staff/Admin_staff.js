@@ -56,7 +56,7 @@ function Admin_staff(props) {
                             
                         </tbody>
                     </Table>
-                    <Button>Add a Staff Member</Button>
+                    <Button variant="outline-primary"><Link to={'/newstaff'}>Add a Staff Member</Link></Button>
                     </div>  
                     
 	  		     
